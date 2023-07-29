@@ -65,6 +65,9 @@ export default function RegisFormPage() {
     if (buyBottle) total += 200;
     if (buyShoes) total += 600;
     if (buyCap) total += 400;
+    if (buyBottle && buyCap && buyShoes) {
+      total = total - (total * 20) / 100;
+    }
 
     return total;
   }
